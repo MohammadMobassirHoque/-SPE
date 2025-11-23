@@ -1,7 +1,14 @@
+
 import React from 'react';
 import { TOKEN_IMAGE } from '../constants';
 
-const HeroCoin: React.FC = () => {
+interface HeroCoinProps {
+  imageUrl?: string;
+}
+
+const HeroCoin: React.FC<HeroCoinProps> = ({ imageUrl }) => {
+  const displayImage = imageUrl || TOKEN_IMAGE;
+
   return (
     <div className="relative w-64 h-64 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] flex-shrink-0 flex items-center justify-center">
       {/* Floating Animation Wrapper */}
@@ -14,17 +21,17 @@ const HeroCoin: React.FC = () => {
           
           {/* Main Image */}
           <img 
-            src={TOKEN_IMAGE} 
-            alt="Supreme Pepe" 
-            className="w-full h-full object-contain relative z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-500 cursor-pointer"
+            src={displayImage} 
+            alt="Token Logo" 
+            className="w-full h-full object-contain relative z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-500 cursor-pointer rounded-full"
           />
 
           {/* Shimmer Effect - Masked to Image to look like light reflecting off the coin */}
           <div 
             className="absolute inset-0 z-20 pointer-events-none"
             style={{
-              maskImage: `url(${TOKEN_IMAGE})`,
-              WebkitMaskImage: `url(${TOKEN_IMAGE})`,
+              maskImage: `url(${displayImage})`,
+              WebkitMaskImage: `url(${displayImage})`,
               maskSize: 'contain',
               WebkitMaskSize: 'contain',
               maskRepeat: 'no-repeat',

@@ -42,7 +42,7 @@ const Roadmap: React.FC = () => {
         }
       },
       {
-        threshold: 0.15,
+        threshold: 0.2,
         rootMargin: "0px"
       }
     );
@@ -155,11 +155,11 @@ const Roadmap: React.FC = () => {
                 bg-[#FFD700] border-4 border-[#8B5A2B] rounded-3xl p-5 md:p-8 
                 flex flex-col items-center text-center shadow-[6px_6px_0_rgba(139,69,19,0.4)] md:shadow-[8px_8px_0_rgba(139,69,19,0.4)] 
                 relative overflow-hidden h-full
-                transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] transform
-                ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-24 scale-90'}
+                transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] transform
+                ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}
                 hover:-translate-y-2 hover:shadow-[10px_10px_0_rgba(139,69,19,0.4)] hover:scale-[1.02]
               `}
-              style={{ transitionDelay: `${idx * 200}ms` }}
+              style={{ transitionDelay: `${idx * 150}ms` }}
             >
               
               {/* Phase Badge */}

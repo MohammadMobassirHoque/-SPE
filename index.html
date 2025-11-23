@@ -44,6 +44,16 @@
                   borderColor: '#22c55e', 
                   boxShadow: '6px 6px 0px 0px #064e3b, 0 0 20px rgba(74, 222, 128, 0.6)' 
                 }
+              },
+              'pulse-border': {
+                '0%, 100%': { 
+                  borderColor: '#064e3b',
+                  boxShadow: '6px 6px 0px 0px #064e3b'
+                },
+                '50%': { 
+                  borderColor: '#FFD700', 
+                  boxShadow: '6px 6px 0px 0px #064e3b, 0 0 15px rgba(255, 215, 0, 0.6)'
+                }
               }
             },
             animation: {
@@ -51,6 +61,7 @@
               wiggle: 'wiggle 7s ease-in-out infinite', // Slower
               shine: 'shine 3s infinite', // Continuous shimmer
               'breathing-glow': 'breathing-glow 3s ease-in-out infinite',
+              'pulse-border': 'pulse-border 3s ease-in-out infinite',
             }
           }
         }

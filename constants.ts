@@ -1,4 +1,5 @@
 
+
 export const CONTRACT_ADDRESS = "8LYFntyVdksZ7R19KtxHqHqox3KoXZ5BvnpGNdr6p1cT";
 
 export const TOKEN_IMAGE = "https://files.catbox.moe/04gd3v.png";
