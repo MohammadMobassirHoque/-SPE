@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$SPE | Supreme Pepe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'pepe-brown': '#965e18', // The background color from the screenshot
+              'pepe-gold': '#FFD700',   // Text gold
+              'pepe-light-brown': '#B87333', // Border/accent
+            },
+            fontFamily: {
+              'comic': ['"Bangers"', 'cursive'],
+              'body': ['"Montserrat"', 'sans-serif'],
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-12px)' }, // Reduced movement for subtlety
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-2deg)' }, // Reduced rotation
+                '50%': { transform: 'rotate(2deg)' },
+              },
+              shine: {
+                '0%': { left: '-100%', opacity: '0' },
+                '50%': { opacity: '0.5' },
+                '100%': { left: '200%', opacity: '0' }
+              },
+              'breathing-glow': {
+                '0%, 100%': { 
+                  borderColor: '#064e3b',
+                  boxShadow: '6px 6px 0px 0px #064e3b'
+                },
+                '50%': { 
+                  borderColor: '#22c55e', 
+                  boxShadow: '6px 6px 0px 0px #064e3b, 0 0 20px rgba(74, 222, 128, 0.6)' 
+                }
+              }
+            },
+            animation: {
+              float: 'float 6s ease-in-out infinite', // Slower for natural feel
+              wiggle: 'wiggle 7s ease-in-out infinite', // Slower
+              shine: 'shine 3s infinite', // Continuous shimmer
+              'breathing-glow': 'breathing-glow 3s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #965e18;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
